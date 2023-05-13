@@ -1,0 +1,13 @@
+# The following project configuration options can be used:
+#   part                  : The FPGA part being used in the project
+#   board_part            : Utilized if using a specific development board
+#   board_part_repo_paths : The location where the development board repository is located
+#   target_language       : 'Verilog' or 'VHDL'
+#   default_lib           : Default is 'work'
+
+design :
+  part                  : xc7a100tcsg324-1
+  board_part            : digilentinc.com:nexys4_ddr:part0:1.1
+  board_part_repo_paths : /home/ada/.Xilinx/Vivado/2021.2.1/xhub/board_store/xilinx_board_store
+  target_language       : Verilog
+  default_lib           : work

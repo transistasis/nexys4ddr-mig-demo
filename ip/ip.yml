@@ -1,0 +1,32 @@
+# This file allows the generation of IP and block design output products in Xilinx Vivado
+# Note that in Non-Project Mode, all output products must be generated for IP and block designs before launching top-level synthesis (UG892).
+#
+# The following attributes can be used for each IP instance:
+#   filetype        : Can be 'xci', 'xco'
+#   pregenerated    : TRUE if output products have already been generated in the IP repository
+#   disable_xdc     : If TRUE, .dcp generation will be disabled (this is used if you want to override IP constraints with top-level constraints) (UNTESTED!)
+#   upgrade_ip      : If TRUE, the IP will be checked to see if a new version is available
+#   generate_target : Allows the user to control which IP output products are generated (default: all)
+#
+# The following attributes can be used for each block design instance:
+#   filetype        : Can be 'bd'
+#   pregenerated    : TRUE if there is an existing block design with all output products intact (UG994)
+ip :
+  ddr_mig :
+    filetype        : xci
+    pregenerated    : false
+    disable_xdc     : false
+    upgrade_ip      : true
+    generate_target : all
+
+  pll :
+    filetype        : xci
+    pregenerated    : false
+    disable_xdc     : false
+    upgrade_ip      : true
+    generate_target : all
+
+bd :
+  microblaze_bd :
+    filetype        : bd
+    pregenerated    : false
